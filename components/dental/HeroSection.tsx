@@ -193,21 +193,21 @@ export default function HeroSection({ onBookAppointment }) {
                       
                       {/* Shield Icon - Top Left */}
                       <motion.g
-                        transform="translate(-80, -80)"
+                        transform="translate(-55, -55)"
                         animate={{ y: [-5, 5, -5] }}
                         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                       >
-                        <circle cx="0" cy="0" r="25" fill="white" stroke="url(#blueGrad)" strokeWidth="2" opacity="0.95"/>
+                        <circle cx="0" cy="0" r="22" fill="white" stroke="url(#blueGrad)" strokeWidth="2" opacity="0.95"/>
                         <path 
-                          d="M-12,-8 L0,-15 L12,-8 L12,8 C12,12 8,16 0,16 C-8,16 -12,12 -12,8 Z" 
+                          d="M-10,-6 L0,-12 L10,-6 L10,6 C10,10 6,14 0,14 C-6,14 -10,10 -10,6 Z" 
                           fill="url(#blueGrad)"
                         />
-                        <path d="M-6,0 L-2,4 L8,-6" stroke="white" strokeWidth="2" strokeLinecap="round" fill="none"/>
+                        <path d="M-5,0 L-2,3 L6,-5" stroke="white" strokeWidth="2" strokeLinecap="round" fill="none"/>
                       </motion.g>
                       
                       {/* Heart Icon - Top Right */}
                       <motion.g
-                        transform="translate(80, -80)"
+                        transform="translate(55, -55)"
                         animate={{ 
                           y: [5, -5, 5],
                           scale: [1, 1.1, 1]
@@ -217,16 +217,16 @@ export default function HeroSection({ onBookAppointment }) {
                           scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
                         }}
                       >
-                        <circle cx="0" cy="0" r="25" fill="white" stroke="#ef4444" strokeWidth="2" opacity="0.95"/>
+                        <circle cx="0" cy="0" r="22" fill="white" stroke="#ef4444" strokeWidth="2" opacity="0.95"/>
                         <path 
-                          d="M0,6 C0,6 -8,-2 -8,-6 C-8,-10 -4,-14 0,-10 C4,-14 8,-10 8,-6 C8,-2 0,6 0,6 Z" 
+                          d="M0,5 C0,5 -7,-2 -7,-5 C-7,-8 -4,-12 0,-9 C4,-12 7,-8 7,-5 C7,-2 0,5 0,5 Z" 
                           fill="#ef4444"
                         />
                       </motion.g>
                       
                       {/* Star Icon - Bottom Left */}
                       <motion.g
-                        transform="translate(-80, 80)"
+                        transform="translate(-55, 55)"
                         animate={{ 
                           rotate: 360,
                           y: [-3, 3, -3]
@@ -236,22 +236,22 @@ export default function HeroSection({ onBookAppointment }) {
                           y: { duration: 4, repeat: Infinity, ease: "easeInOut" }
                         }}
                       >
-                        <circle cx="0" cy="0" r="25" fill="white" stroke="url(#tealGrad)" strokeWidth="2" opacity="0.95"/>
+                        <circle cx="0" cy="0" r="22" fill="white" stroke="url(#tealGrad)" strokeWidth="2" opacity="0.95"/>
                         <path 
-                          d="M0,-10 L3,-3 L10,-3 L5,2 L7,9 L0,6 L-7,9 L-5,2 L-10,-3 L-3,-3 Z" 
+                          d="M0,-8 L2,-3 L8,-3 L4,1 L6,7 L0,5 L-6,7 L-4,1 L-8,-3 L-2,-3 Z" 
                           fill="url(#tealGrad)"
                         />
                       </motion.g>
                       
                       {/* Plus/Medical Icon - Bottom Right */}
                       <motion.g
-                        transform="translate(80, 80)"
+                        transform="translate(55, 55)"
                         animate={{ y: [3, -3, 3] }}
                         transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
                       >
-                        <circle cx="0" cy="0" r="25" fill="white" stroke="url(#blueGrad)" strokeWidth="2" opacity="0.95"/>
-                        <rect x="-8" y="-3" width="16" height="6" fill="url(#blueGrad)" rx="3"/>
-                        <rect x="-3" y="-8" width="6" height="16" fill="url(#blueGrad)" rx="3"/>
+                        <circle cx="0" cy="0" r="22" fill="white" stroke="url(#blueGrad)" strokeWidth="2" opacity="0.95"/>
+                        <rect x="-7" y="-3" width="14" height="6" fill="url(#blueGrad)" rx="3"/>
+                        <rect x="-3" y="-7" width="6" height="14" fill="url(#blueGrad)" rx="3"/>
                       </motion.g>
                       
                       {/* Connecting Lines */}
@@ -261,7 +261,7 @@ export default function HeroSection({ onBookAppointment }) {
                         transition={{ duration: 2, delay: 0.5 }}
                       >
                         <path 
-                          d="M-60,-60 Q-30,-30 0,0 Q30,30 60,60" 
+                          d="M-40,-40 Q-20,-20 0,0 Q20,20 40,40" 
                           stroke="url(#blueGrad)" 
                           strokeWidth="2" 
                           fill="none"
@@ -269,7 +269,7 @@ export default function HeroSection({ onBookAppointment }) {
                           opacity="0.4"
                         />
                         <path 
-                          d="M60,-60 Q30,-30 0,0 Q-30,30 -60,60" 
+                          d="M40,-40 Q20,-20 0,0 Q-20,20 -40,40" 
                           stroke="url(#tealGrad)" 
                           strokeWidth="2" 
                           fill="none"
@@ -292,7 +292,7 @@ export default function HeroSection({ onBookAppointment }) {
                 <motion.div
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 bg-white rounded-xl sm:rounded-2xl shadow-xl p-3 sm:p-4 border border-blue-100"
+                  className="absolute top-6 -right-4 sm:top-6 sm:right-4 bg-white rounded-xl sm:rounded-2xl shadow-xl p-3 sm:p-4 border border-blue-100"
                 >
                   <div className="flex items-center gap-2 sm:gap-3">
                     <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" />
@@ -306,7 +306,7 @@ export default function HeroSection({ onBookAppointment }) {
                 <motion.div
                   animate={{ y: [0, 10, 0] }}
                   transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-white rounded-xl sm:rounded-2xl shadow-xl p-3 sm:p-4 border border-teal-100"
+                  className="absolute -bottom-4 -left-4 sm:bottom-6 sm:left-6 bg-white rounded-xl sm:rounded-2xl shadow-xl p-3 sm:p-4 border border-teal-100"
                 >
                   <div className="flex items-center gap-2 sm:gap-3">
                     <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br from-green-400 to-teal-500 rounded-full flex items-center justify-center">
