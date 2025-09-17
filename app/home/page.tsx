@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { 
@@ -21,14 +22,14 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 
-import HeroSection from '../components/dental/HeroSection';
-import ServicesSection from '../components/dental/ServicesSection';
-import AboutSection from '../components/dental/AboutSection';
-import TestimonialsSection from '../components/dental/TestimonialsSection';
-import TeamSection from '../components/dental/TeamSection';
-import ContactSection from '../components/dental/ContactSection';
-import NavigationBar from '../components/dental/NavigationBar';
-import BookingModal from '../components/booking/BookingModal';
+import HeroSection from '@/components/dental/HeroSection';
+import ServicesSection from '@/components/ServiceSection';
+import AboutSection from '@/components/dental/AboutSection';
+import TestimonialsSection from '@/components/dental/TestimonialSection';
+import TeamSection from '@/components/dental/TeamSection';
+import ContactSection from '@/components/dental/ContactSection';
+import NavigationBar from '@/components/dental/NavigationBar';
+import BookingModal from '@/components/booking/BookingModal';
 
 export default function page() {
   const { scrollY } = useScroll();
@@ -41,7 +42,7 @@ export default function page() {
       
       <main className="relative">
         <HeroSection onBookAppointment={() => setIsBookingModalOpen(true)} />
-        <ServicesSection />
+       
         <AboutSection />
         <TeamSection />
         <TestimonialsSection />
