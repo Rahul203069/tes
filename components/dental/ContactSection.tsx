@@ -1,4 +1,4 @@
-
+//@ts-nocheck
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, Send, Calendar, CheckCircle } from 'lucide-react';

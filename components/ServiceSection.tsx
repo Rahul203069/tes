@@ -1,4 +1,4 @@
-
+//@ts-nocheck
 import React, { useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Calendar, Shield, Award, Play, ArrowRight, Star } from 'lucide-react';

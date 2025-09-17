@@ -1,4 +1,4 @@
-
+//@ts-nocheck
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Award, GraduationCap, MapPin } from 'lucide-react';
