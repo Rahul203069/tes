@@ -113,35 +113,34 @@ export default function ContactSection({ onBookAppointment }) {
               ))}
             </div>
 
-            {/* Quick Actions */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.8 }}
-              viewport={{ once: true }}
-              className="space-y-4"
-            >
-              <h3 className="text-xl font-bold text-slate-800">Quick Actions</h3>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Button 
-                  onClick={onBookAppointment}
-                  size="lg" 
-                  className="bg-gradient-to-r from-blue-600 to-teal-500 hover:from-blue-700 hover:to-teal-600 text-white flex-1"
-                >
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Book Online
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="border-2 border-slate-300 hover:border-blue-400 text-slate-700 hover:text-blue-600 flex-1"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call Now
-                </Button>
-              </div>
-            </motion.div>
-          </motion.div>
+           {/* Quick Actions */}
+<motion.div
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ delay: 0.8 }}
+  viewport={{ once: true }}
+  className="space-y-4"
+>
+  <h3 className="text-xl font-bold text-slate-800">Quick Actions</h3>
+  <div className="flex flex-col gap-3 sm:flex-row sm:gap-3">
+    <Button
+      onClick={onBookAppointment}
+      size="lg"
+      className="bg-gradient-to-r from-blue-600 to-teal-500 hover:from-blue-700 hover:to-teal-600 text-white w-full sm:flex-1 min-h-[48px] px-6"
+    >
+      <Calendar className="w-5 h-5 mr-2" />
+      Book Online
+    </Button>
+    <Button
+      variant="outline"
+      size="lg"
+      className="border-2 border-slate-300 hover:border-blue-400 text-slate-700 hover:text-blue-600 w-full sm:flex-1 min-h-[48px] px-6"
+    >
+      <Phone className="w-5 h-5 mr-2" />
+      Call Now
+    </Button>
+  </div>
+</motion.div>
 
           {/* Contact Form */}
           <motion.div
