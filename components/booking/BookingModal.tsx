@@ -9,7 +9,7 @@ import ServiceStep from './ServiceStep';
 import DateTimeStep from './DateTimeStep';
 import DetailsStep from './DetailsStep';
 import SuccessStep from './SuccessStep';
-
+const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 const steps = [
   { id: 1, title: 'Select a Service', description: 'Choose the service you are interested in.' },
   { id: 2, title: 'Choose Date & Time', description: 'Select a convenient date and time for your appointment.' },
@@ -48,10 +48,7 @@ export default function BookingModal({ isOpen, onClose }) {
     setAppointmentData(finalData);
     
     try {
-      await appointment.create({
-        ...finalData,
-        status: 'Pending',
-      });
+     await wait(1000);
       setIsSubmitting(false);
       handleNext(finalData);
     } catch (error) {
