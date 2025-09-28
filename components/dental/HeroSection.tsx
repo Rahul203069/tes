@@ -126,7 +126,7 @@ export default function HeroSection({ onBookAppointment }) {
                 <div className="aspect-[4/5]">
                   {/* Replace this src with your dental image URL */}
                   <img 
-                    src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                    src="https://static.vecteezy.com/system/resources/thumbnails/000/987/284/small_2x/successful-doctor-dentist-smiling-dentist-checks-the-teeth-of-t.jpg"
                     alt="Modern dental care and beautiful smile"
                     className="w-full h-full object-cover"
                   />
