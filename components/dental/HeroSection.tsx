@@ -112,7 +112,7 @@ export default function HeroSection({ onBookAppointment }) {
             </motion.div>
           </motion.div>
 
-          {/* Right Content - Beautiful Dental Illustration */}
+          {/* Right Content - Image with Floating Cards */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -121,174 +121,20 @@ export default function HeroSection({ onBookAppointment }) {
             className="relative mt-12 lg:mt-0"
           >
             <div className="relative">
-              {/* Main Illustration Container */}
-              <div className="relative bg-gradient-to-br from-blue-50 via-white to-teal-50 rounded-3xl shadow-2xl overflow-hidden p-12">
-                <div className="aspect-[4/5] flex items-center justify-center">
-                  {/* Clean & Modern Dental Illustration */}
-                  <svg viewBox="0 0 400 500" className="w-full h-full max-w-sm">
-                    <defs>
-                      <linearGradient id="toothGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#ffffff" />
-                        <stop offset="100%" stopColor="#f1f5f9" />
-                      </linearGradient>
-                      <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#3b82f6" />
-                        <stop offset="100%" stopColor="#1e40af" />
-                      </linearGradient>
-                      <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#14b8a6" />
-                        <stop offset="100%" stopColor="#0d9488" />
-                      </linearGradient>
-                      <filter id="glow">
-                        <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-                        <feMerge> 
-                          <feMergeNode in="coloredBlur"/>
-                          <feMergeNode in="SourceGraphic"/>
-                        </feMerge>
-                      </filter>
-                    </defs>
-                    
-                    {/* Background */}
-                    <rect width="400" height="500" fill="transparent"/>
-                    
-                    {/* Main Content Area */}
-                    <g transform="translate(200, 250)">
-                      
-                      {/* Large Central Tooth - Clean & Minimalist */}
-                      <motion.g
-                        initial={{ scale: 0.8, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        transition={{ duration: 1, ease: "easeOut" }}
-                      >
-                        <path 
-                          d="M-30,-60 C-30,-75 -15,-90 0,-90 C15,-90 30,-75 30,-60 L30,45 C30,60 15,75 0,75 C-15,75 -30,60 -30,45 Z" 
-                          fill="url(#toothGrad)" 
-                          stroke="#e2e8f0" 
-                          strokeWidth="2"
-                          filter="url(#glow)"
-                        />
-                        
-                        {/* Tooth Highlight */}
-                        <ellipse cx="-10" cy="-30" rx="6" ry="20" fill="white" opacity="0.7"/>
-                        
-                        {/* Sparkle Effect */}
-                        <motion.g
-                          animate={{ 
-                            rotate: 360,
-                            scale: [1, 1.2, 1]
-                          }}
-                          transition={{ 
-                            rotate: { duration: 8, repeat: Infinity, ease: "linear" },
-                            scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
-                          }}
-                        >
-                          <circle cx="-25" cy="-50" r="2" fill="#fbbf24" opacity="0.8"/>
-                          <circle cx="25" cy="-40" r="1.5" fill="#06b6d4" opacity="0.9"/>
-                          <circle cx="-20" cy="30" r="1" fill="#10b981" opacity="0.7"/>
-                          <circle cx="20" cy="20" r="1.5" fill="#8b5cf6" opacity="0.6"/>
-                        </motion.g>
-                      </motion.g>
-                      
-                      {/* Floating Icons Around Tooth */}
-                      
-                      {/* Shield Icon - Top Left */}
-                      <motion.g
-                        transform="translate(-55, -55)"
-                        animate={{ y: [-5, 5, -5] }}
-                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                      >
-                        <circle cx="0" cy="0" r="22" fill="white" stroke="url(#blueGrad)" strokeWidth="2" opacity="0.95"/>
-                        <path 
-                          d="M-10,-6 L0,-12 L10,-6 L10,6 C10,10 6,14 0,14 C-6,14 -10,10 -10,6 Z" 
-                          fill="url(#blueGrad)"
-                        />
-                        <path d="M-5,0 L-2,3 L6,-5" stroke="white" strokeWidth="2" strokeLinecap="round" fill="none"/>
-                      </motion.g>
-                      
-                      {/* Heart Icon - Top Right */}
-                      <motion.g
-                        transform="translate(55, -55)"
-                        animate={{ 
-                          y: [5, -5, 5],
-                          scale: [1, 1.1, 1]
-                        }}
-                        transition={{ 
-                          y: { duration: 2.5, repeat: Infinity, ease: "easeInOut" },
-                          scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
-                        }}
-                      >
-                        <circle cx="0" cy="0" r="22" fill="white" stroke="#ef4444" strokeWidth="2" opacity="0.95"/>
-                        <path 
-                          d="M0,5 C0,5 -7,-2 -7,-5 C-7,-8 -4,-12 0,-9 C4,-12 7,-8 7,-5 C7,-2 0,5 0,5 Z" 
-                          fill="#ef4444"
-                        />
-                      </motion.g>
-                      
-                      {/* Star Icon - Bottom Left */}
-                      <motion.g
-                        transform="translate(-55, 55)"
-                        animate={{ 
-                          rotate: 360,
-                          y: [-3, 3, -3]
-                        }}
-                        transition={{ 
-                          rotate: { duration: 10, repeat: Infinity, ease: "linear" },
-                          y: { duration: 4, repeat: Infinity, ease: "easeInOut" }
-                        }}
-                      >
-                        <circle cx="0" cy="0" r="22" fill="white" stroke="url(#tealGrad)" strokeWidth="2" opacity="0.95"/>
-                        <path 
-                          d="M0,-8 L2,-3 L8,-3 L4,1 L6,7 L0,5 L-6,7 L-4,1 L-8,-3 L-2,-3 Z" 
-                          fill="url(#tealGrad)"
-                        />
-                      </motion.g>
-                      
-                      {/* Plus/Medical Icon - Bottom Right */}
-                      <motion.g
-                        transform="translate(55, 55)"
-                        animate={{ y: [3, -3, 3] }}
-                        transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-                      >
-                        <circle cx="0" cy="0" r="22" fill="white" stroke="url(#blueGrad)" strokeWidth="2" opacity="0.95"/>
-                        <rect x="-7" y="-3" width="14" height="6" fill="url(#blueGrad)" rx="3"/>
-                        <rect x="-3" y="-7" width="6" height="14" fill="url(#blueGrad)" rx="3"/>
-                      </motion.g>
-                      
-                      {/* Connecting Lines */}
-                      <motion.g
-                        initial={{ pathLength: 0, opacity: 0 }}
-                        animate={{ pathLength: 1, opacity: 0.3 }}
-                        transition={{ duration: 2, delay: 0.5 }}
-                      >
-                        <path 
-                          d="M-40,-40 Q-20,-20 0,0 Q20,20 40,40" 
-                          stroke="url(#blueGrad)" 
-                          strokeWidth="2" 
-                          fill="none"
-                          strokeDasharray="5,5"
-                          opacity="0.4"
-                        />
-                        <path 
-                          d="M40,-40 Q20,-20 0,0 Q-20,20 -40,40" 
-                          stroke="url(#tealGrad)" 
-                          strokeWidth="2" 
-                          fill="none"
-                          strokeDasharray="5,5"
-                          opacity="0.4"
-                        />
-                      </motion.g>
-                      
-                      {/* Background Circles */}
-                      <g opacity="0.1">
-                        <circle cx="0" cy="0" r="120" fill="none" stroke="url(#blueGrad)" strokeWidth="1"/>
-                        <circle cx="0" cy="0" r="160" fill="none" stroke="url(#tealGrad)" strokeWidth="1"/>
-                      </g>
-                      
-                    </g>
-                  </svg>
+              {/* Main Image Container */}
+              <div className="relative bg-gradient-to-br from-blue-50 via-white to-teal-50 rounded-3xl shadow-2xl overflow-hidden">
+                <div className="aspect-[4/5]">
+                  {/* Replace this src with your dental image URL */}
+                  <img 
+                    src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                    alt="Modern dental care and beautiful smile"
+                    className="w-full h-full object-cover"
+                  />
+                  {/* Optional overlay for better contrast with floating cards */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
                 </div>
                 
-                {/* Floating Cards */}
+                {/* Floating Cards - Same as before */}
                 <motion.div
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}

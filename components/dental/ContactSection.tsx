@@ -234,6 +234,7 @@ export default function ContactSection({ onBookAppointment }) {
               </CardContent>
             </Card>
           </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>
